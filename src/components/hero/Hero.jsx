@@ -25,6 +25,20 @@ export const Hero = () => {
       }
     }
   };
+  const sliderVariants = {
+    initial: {
+      x: 0,
+    },
+    animate: {
+      x: "-220%",
+      opacity: 1,
+      transition: {
+        duration: 20,
+        repeat: Infinity,
+        repeatType: "mirror",
+      },
+    },
+  };
   return (
     <div className="hero">
       <div className="wrapper">
@@ -47,9 +61,9 @@ export const Hero = () => {
           <motion.img src="/scroll.png" alt="" variants={textVariants} animate="scrollButton" />
         </motion.div>
       </div>
-      <div className="slidingTextContainer">
+      <motion.div className="slidingTextContainer" variants={sliderVariants} initial="initial" animate="animate">
         Writer Content Creator Influencer
-      </div>
+      </motion.div>
       <div className="imageContainer">
         <motion.img src="/hero.png" alt="" />
       </div>

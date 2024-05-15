@@ -45,11 +45,16 @@
     bottom: -120px;
     white-space: nowrap;
     color: #ffffff09;
+    width: 50%;
+    font-weight: bold;
   }
   .imageContainer {
     height: 100%;
     position: absolute;
     top: 0;
     right: 0;
+    img {
+      height: 100%;
+    }
   }
 }
